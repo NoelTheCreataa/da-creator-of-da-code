@@ -1,0 +1,41 @@
+var SENTINAL = 0;
+var correctNumber = Randomizer.nextInt(1, 100);
+
+
+
+function start(){
+    
+    println("Welcome to the number guesser! The computer has picked a random number between 1 to 100. If you want to end the program, type the number 0.");
+    
+    while (true){
+        var guessedNumber = readInt ("Enter your guess: ");
+        
+        if (guessedNumber == correctNumber){
+            
+        println("Correct! Well done!");
+        break;
+        }
+        
+        if (guessedNumber > correctNumber){
+            
+            println("Your number was too high.");
+            
+        }
+        
+        if (guessedNumber < correctNumber){
+            
+            println("Your number was too low.");
+            
+        }
+        if (guessedNumber  == SENTINAL){
+            
+            println ("");
+            println("Alright, you can leave!");
+            break;
+        }
+        
+        
+    }
+    
+    
+}
